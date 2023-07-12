@@ -30,6 +30,7 @@ public class BubbleSortTest {
         System.out.println("Expected: " + expectedResult);
         System.out.println("Actual: " + actualResult);
     }
+
     @Test
     @DisplayName("Scrambled path")
     public void scrambledPath(){
@@ -45,11 +46,23 @@ public class BubbleSortTest {
     @DisplayName("Negative Values")
     public void negativeValues(){
         BubbleSort bubbleSort = new BubbleSort();
-        ArrayList<Integer> actualResult = bubbleSort.sort(new ArrayList<>(Arrays.asList(-6,46, 23, 45, 0)));
+        ArrayList<Integer> actualResult = bubbleSort.sort(new ArrayList<>(Arrays.asList(-6, 23, 46, 45, 0)));
         ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(-6, 0, 23, 45,46));
         Assertions.assertEquals(expectedResult, actualResult);
         System.out.println("Expected: " + expectedResult);
         System.out.println("Actual: " + actualResult);
     }
+
+    @Test
+    @DisplayName("Not Equals Values")
+    public void notEquals(){
+        BubbleSort bubbleSort = new BubbleSort();
+        ArrayList<Integer> actualResult = bubbleSort.sort(new ArrayList<>(Arrays.asList(-6, 23, 46, 45, 0)));
+        ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(-6, 0, 45,46));
+        Assertions.assertNotEquals(expectedResult, actualResult);
+        System.out.println("Expected: " + expectedResult);
+        System.out.println("Actual: " + actualResult);
+    }
+
 
 }

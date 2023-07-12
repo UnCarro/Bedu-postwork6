@@ -11,8 +11,8 @@ public class BubbleSort {
         int innerIteration;
         int temp;
         int collectionSize = input.size();
-
         boolean isSwapped;
+
         for (firstIteration = 0; firstIteration < collectionSize - 1; firstIteration++) {
             isSwapped = false;
             for (innerIteration = 0; innerIteration < collectionSize - firstIteration - 1; innerIteration++) {
